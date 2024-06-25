@@ -1,0 +1,60 @@
+<core:FragmentDefinition
+	xmlns="sap.m" xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+>
+	<Dialog
+		title="Add Expense">
+		<Switch state="true" id="buttonId" change="OnOffButton"></Switch>
+    <f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				<Label text="Expense Type" />
+				<Select id="exptype" selectedKey="" >
+					<items>
+						<core:Item text="None" key="None" />
+						<core:Item text="Perdiem" key="Perdiem"/>
+						<core:Item text="Taxi" key="Taxi"/>
+					</items>
+				</Select>
+
+					<Label text="Expname"/>
+				<Input value="" visible="false" id="expname"></Input>
+				 
+
+				<Label text="Date" />
+                <DatePicker
+					id="expdate"
+					placeholder="Enter Date"
+					change="handleChange"
+					class="sapUiSmallMarginBottom"
+					showFooter="true"/>
+
+
+				<Label text="Days" />
+				<Input id="day" value=""  />
+
+				<Label text="Amount"/>
+				<Input visible="false" id="expamount" value="" change="onAmount" type="Number" />
+			</f:content>
+		</f:SimpleForm>
+        <Button text="Save" press="onPressSave"  />
+        <Button text="Close" press="onPressClose"  />
+	</Dialog>
+</core:FragmentDefinition>
+
+

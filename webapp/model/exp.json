@@ -1,0 +1,19 @@
+{
+    "studentdata":[{
+        "expid":1,
+        "expname":"car",
+        "amount":1000,
+        "Date":"02-05-2024"
+    },{
+        "expid":2,
+        "expname":"Hotel",
+        "amount":1000,
+        "Date":"02-05-2024"
+    },{
+        "expid":3,
+        "expname":"Hotel",
+        "amount":1000,
+        "Date":"02-05-2024"
+    }
+]
+}
